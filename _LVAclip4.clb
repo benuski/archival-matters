@@ -137,13 +137,7 @@ Section 0 and 1 in the old MU forms.
 
 H="<eadheader> and <frontmatter>"
 
-^!Set %eadid%=^?[(T=C)Vi number:]; %findaidstatus%=^?[(T=C)Finding Aid Status:==_edited-partial-draft|edited-full-draft|unverified-full-draft|unverified-partial-draft]; %titleproper%=^?[(T=C)Title of collection <titleproper>:]; 
-
-%dates%=^?[(T=C)Dates of collection <date>:]; %titlepropersorttitle%=^?[(T=C)"Sort" title goes here <subtitle>:]; %collectionnumber%=^?[(T=C)Collection/accession number <num>:]; %author%=^?[(T=C)Author of finding aid <author>:]; 
-
-%encoder%=^?[(T=C)Encoder of finding aid:]; %encodeddate%=^?[(T=C)Date finding aid encoded (e.g. 14 January 2008):]; %processor%=^?[(T=C)Processor of collection:]; %derivedfrom%=^?[(T=C)EAD finding aid:==_derived from MARC record|derived 
-
-from MS Word|derived from Database|derived from Paper|created in EAD]; %copyrightdate%=^?[(T=C)Year of publication (of finding aid) R:] 
+^!Set %eadid%=^?[(T=C)Vi number:]; %findaidstatus%=^?[(T=C)Finding Aid Status:==_edited-partial-draft|edited-full-draft|unverified-full-draft|unverified-partial-draft]; %titleproper%=^?[(T=C)Title of collection <titleproper>:]; %dates%=^?[(T=C)Dates of collection <date>:]; %titlepropersorttitle%=^?[(T=C)"Sort" title goes here <subtitle>:]; %collectionnumber%=^?[(T=C)Collection/accession number <num>:]; %author%=^?[(T=C)Author of finding aid <author>:]; %encoder%=^?[(T=C)Encoder of finding aid:]; %encodeddate%=^?[(T=C)Date finding aid encoded (e.g. 14 January 2008):]; %processor%=^?[(T=C)Processor of collection:]; %derivedfrom%=^?[(T=C)EAD finding aid:==_derived from MARC record|derived from MS Word|derived from Database|derived from Paper|created in EAD]; %copyrightdate%=^?[(T=C)Year of publication (of finding aid) R:] 
 
 <?xml version="1.0"?>
 <?xml-model href="http://www.loc.gov/ead/ead.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
@@ -189,7 +183,7 @@ from MS Word|derived from Database|derived from Paper|created in EAD]; %copyrigh
 
 
 <profiledesc>
-<creation>Machine-readable finding aid derived from ^%derivedfrom% by ^%encoder%, <date>^%encodeddate%</date>
+<creation>Machine-readable finding aid ^%derivedfrom% by ^%encoder%, <date>^%encodeddate%</date>
 </creation>
 <langusage>Description is in
 <language langcode="eng">English
