@@ -23,7 +23,7 @@ This is version 4.0 updated on 28 July 2013
 3.7 (22 March 2007) Changed coding for copyright symbol
 3.8 (27 February 2008) Corrected level attributes for recordgrp and subgrp
 3.9 (1 August 2011) Removed extra close container tag
-4.0 (28 July 2013) Switch to RELAX-NG schema
+4.0 (28 July 2013) Switch to RELAX-NG schema and added to Github. Version history now lives there.
 H=" "
 
 
