@@ -1,7 +1,7 @@
 = V5 MultiLine NoSorting TabWidth=30
 
 H=";VERSION HISTORY"
-This is version 4.0 updated on 28 July 2013
+This is version 4.1 updated on 15 July 2013.
 
 1.3 (19 October):Update render title "italics" to "italic" since text following "italics" would not display.
 1.4 (04 November): Paxer changed to validate against dtd. Fix defitem in Section 1.
@@ -23,7 +23,7 @@ This is version 4.0 updated on 28 July 2013
 3.7 (22 March 2007) Changed coding for copyright symbol
 3.8 (27 February 2008) Corrected level attributes for recordgrp and subgrp
 3.9 (1 August 2011) Removed extra close container tag
-4.0 (28 July 2013) Switch to RELAX-NG schema and added to Github. Version history now lives there.
+4.0 (28 July 2013) Switch to RELAX-NG schema.
 4.1 (15 July 2013) File is now hosted in Github, newest version can always be found at https://github.com/uvalib-dcs/VA-Heritage/blob/master/guides%2Btemplates/_VHclip2013
 H=" "
 
@@ -240,15 +240,7 @@ Upper level <did>.  Overview of Collection
 
 H="Descriptive Summary"
 
-^!Set %title%=^?[(T=C)Title of collection <unittitle> R:]; %dates%=^?[(T=C)Inclusive or bulk dates of collection <unitdate> R:]; %datetype%=^?[(T=C)Inclusive or Bulk?==_inclusive|bulk]; %collectionnumber%=^?[(T=C)Collection/accession 
-
-number<unitid> R:]; %physloclabel%=^?[(T=C)Physical Location Label?==_|Location|Shelf Location|Storage Location]; %physloc%=^?[(T=C)Physical Location Text <physloc> NR:]; %physdesclabel%=^?[(T=C)Physical Description 
-
-Label?==_Extent|Physical Characteristics|Size|Physical Description]; %physdesc%=^?[(T=C)Extent of collection, in two forms (e.g. cu. ft. and # of boxes)<physdesc> R:]; %abstract%=^?[(T=C)Abstract <abstract> NR:]; 
-
-%originationlabel%=^?[(T=C)Creator or Collector?==_Creator|Collector]; %originationencodinganalog%=^?[(T=C)MARC Encoding Analog (100 or 110) for Creator or Collector?==_100$a|110$a]; %origination%=^?[(T=C)Creator or collector of 
-
-collection <origination> NR:]
+^!Set %title%=^?[(T=C)Title of collection <unittitle> R:]; %dates%=^?[(T=C)Inclusive or bulk dates of collection <unitdate> R:]; %datetype%=^?[(T=C)Inclusive or Bulk?==_inclusive|bulk]; %collectionnumber%=^?[(T=C)Collection/accession number<unitid> R:]; %physloclabel%=^?[(T=C)Physical Location Label?==_|Location|Shelf Location|Storage Location]; %physloc%=^?[(T=C)Physical Location Text <physloc> NR:]; %physdesclabel%=^?[(T=C)Physical Description Label?==_Extent|Physical Characteristics|Size|Physical Description]; %physdesc%=^?[(T=C)Extent of collection, in two forms (e.g. cu. ft. and # of boxes)<physdesc> R:]; %abstract%=^?[(T=C)Abstract <abstract> NR:]; %originationlabel%=^?[(T=C)Creator or Collector?==_Creator|Collector]; %originationencodinganalog%=^?[(T=C)MARC Encoding Analog (100 or 110) for Creator or Collector?==_100$a|110$a]; %origination%=^?[(T=C)Creator or collector of collection <origination> NR:]
 
 <archdesc level="collection">
 <runner placement="footer">Library of Virginia
@@ -288,9 +280,7 @@ This section records access restrictions, use restrictions, preferred citation, 
 
 H="<descgrp type="admininfo">"
 
-^!Set %accessrestrict%=^?[(T=C)Access Restrictions <accessrestrict> R:==There are no restrictions.]; %userestrict%=^?[(T=C)Use Restrictions <userestrict> R:==There are no restrictions.]; %prefercite%=^?[(T=C)Preferred Citation 
-
-<prefercite> R:]; %acqinfo%=^?[(T=C)Acquisition Information <acqinfo> R:]
+^!Set %accessrestrict%=^?[(T=C)Access Restrictions <accessrestrict> R:==There are no restrictions.]; %userestrict%=^?[(T=C)Use Restrictions <userestrict> R:==There are no restrictions.]; %prefercite%=^?[(T=C)Preferred Citation <prefercite> R:]; %acqinfo%=^?[(T=C)Acquisition Information <acqinfo> R:]
 
 <descgrp type="admininfo">
 <head>Administrative Information
@@ -389,9 +379,7 @@ This section records the biographical or historical information, and scope and c
 
 H="Biographical/Historical Note"
 
-^!Set %bioghisthead%=^?[(T=C)Biographical Information or Historical Information?==_Biographical Information|Historical Information|Biographical/Historical Information ]; %bioghist%=^?[(T=C)Biographical or Historical Information 
-
-<bioghist> RA:]
+^!Set %bioghisthead%=^?[(T=C)Biographical Information or Historical Information?==_Biographical Information|Historical Information|Biographical/Historical Information ]; %bioghist%=^?[(T=C)Biographical or Historical Information <bioghist> RA:]
 
 <bioghist encodinganalog="545$a">
 <head>^%bioghisthead%
@@ -462,9 +450,7 @@ Enter All Elements Here
 H="Element Entry Clip"
 
 :Yes
-^!Set %itype%=^?{Choose type of element (must appear in the finding aid in the order listed in the drop-down menu)=_Bibliography^=bibliography|File Plan^=fileplan|Location of Originals^=originalsloc|Other Finding 
-
-Aid^=otherfindaid|Technical Requirements^=phystech|Related Material^=relatedmaterial|Separated Material^=separatedmaterial|}; %text%=^?{Text}
+^!Set %itype%=^?{Choose type of element (must appear in the finding aid in the order listed in the drop-down menu)=_Bibliography^=bibliography|File Plan^=fileplan|Location of Originals^=originalsloc|Other Finding Aid^=otherfindaid|Technical Requirements^=phystech|Related Material^=relatedmaterial|Separated Material^=separatedmaterial|}; %text%=^?{Text}
 
 ^!GoTo ^%itype%
 
@@ -642,9 +628,7 @@ Enter All Index Terms Here
 H="Item Tags Entry Clip"
 
 :Yes
-^!Set %itype%=^?{Choose type of Term=_Person^=persname|Family Name^=famname|Corporate Name^=corpname|Subject^=subject|Geographical Name^=geogname|Title^=title|Function^=function|Form/Genre^=genreform|Occupation^=occupation|}; 
-
-%term%=^?{Catalog Term}
+^!Set %itype%=^?{Choose type of Term=_Person^=persname|Family Name^=famname|Corporate Name^=corpname|Subject^=subject|Geographical Name^=geogname|Title^=title|Function^=function|Form/Genre^=genreform|Occupation^=occupation|}; %term%=^?{Catalog Term}
 
 ^!GoTo ^%itype%
 
@@ -701,9 +685,7 @@ H="Item Tags Entry Clip"
 :No
 ^!Goto End
 
-
 H=";"
-
 
 H=";8. CONTENTS LISTING <DSC>"
 Note that the "</dsc>" clip no longer contains the </archdesc> and </ead> tags. They are now located in clip #9. 
@@ -909,11 +891,7 @@ H="Close <revisiondesc>"
 H=";"
 
 H=";<LANGMATERIAL>"
-For adding additional <language> elements if the collection you are describing has material in more than one language.  ELEMENT MUST BE PLACED BETWEEN THE LAST CLOSED </LANGUAGE> ELEMENT AND THE CLOSED <LANGMATERIAL> ELEMENT IN THE UPPER 
-
-LEVEL <DID>.  Do not confuse the <langmaterial> element with the <langusage> element which specifies the language(s) in which the finding aid was written.  The langcode attribute should be set using the standard three letter 
-
-bibliographic codes specified in ISO 639-2b. These codes are available at http://www.loc.gov/standards/iso639-2/langcodes.html.
+For adding additional <language> elements if the collection you are describing has material in more than one language. ELEMENT MUST BE PLACED BETWEEN THE LAST CLOSED </LANGUAGE> ELEMENT AND THE CLOSED <LANGMATERIAL> ELEMENT IN THE UPPER  LEVEL <DID>.  Do not confuse the <langmaterial> element with the <langusage> element which specifies the language(s) in which the finding aid was written. The langcode attribute should be set using the standard three letter bibliographic codes specified in ISO 639-2b. These codes are available at http://www.loc.gov/standards/iso639-2/langcodes.html.
 
 H="Additional <language> elements"
 <language langcode="^?[Type Appropriate ISO 639-2b Language Code Here (i.e. eng, fre, ger, spa)"]">^?[Type Language Name Here (i.e. English, French, German, Spanish, etc.)]
