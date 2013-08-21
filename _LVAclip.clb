@@ -170,10 +170,6 @@ H="<eadheader> and <frontmatter>"
 <date type="publication">&#169; ^%copyrightdate% By The Library of Virginia. All Rights Reserved. 
 </date> 
 
-
-<p id="usestatement">
-<extref xlink:type="simple" xlink:href="http://www.lib.virginia.edu/speccol/vhp/conditions.html" />
-</p>
 </publicationstmt>
 
 </filedesc>
@@ -212,7 +208,7 @@ H="<eadheader> and <frontmatter>"
 </publisher>
 
 <date type="publication">^%copyrightdate%
-</date><xi:include xmlns:xi="http://www.w3.org/2001/XInclude"  href="http://ead.lib.virginia.edu/vivaead/add_con/lva_contact.xi.xml" />
+</date>
 
 <list type="deflist">
 <defitem>
